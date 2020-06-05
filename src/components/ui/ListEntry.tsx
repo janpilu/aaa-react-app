@@ -3,31 +3,33 @@ import { ListItem, ListItemText, ListItemAvatar, Avatar, Typography } from "@mat
 import { t } from "../../i18n/util";
 
 interface Props {
-    name:string,
-    country:string,
-    value:number,
-    image:string,
-    euro_titles:number
+    team: {
+        name: string;
+        country: string;
+        value: number;
+        image: string;
+        european_titles: number;
+    };
 }
 
-const ListEntry: React.FC<Props> = ({country,euro_titles,image,name,value}) =>{
+const ListEntry: React.FC<Props> = ({ team }) => {
     return <ListItem button>
-            <ListItemAvatar>
-                    <Avatar src={image}/>
-            </ListItemAvatar>
-          <ListItemText primary={name} secondary={
+        <ListItemAvatar>
+            <Avatar src={team.image} />
+        </ListItemAvatar>
+        <ListItemText primary={team.name} secondary={
             <React.Fragment>
-              <Typography
-                component="span"
-                variant="body2"
-                color="textPrimary"
-              >
-               {country} 
-              </Typography>
-              {value} {t("screen.listentry.million")}{t("screen.listentry.euro")}
+                <Typography
+                    component="span"
+                    variant="body2"
+                    color="textPrimary"
+                >
+                    {team.country}
+                </Typography>
+                {team.value} {t("screen.listentry.million")}{t("screen.listentry.euro")}
             </React.Fragment>
-          } />
-        </ListItem>
-}
+        } />
+    </ListItem>
+};
 
 export default ListEntry;
