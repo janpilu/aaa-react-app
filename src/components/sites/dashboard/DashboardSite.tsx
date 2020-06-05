@@ -49,6 +49,12 @@ export class DashboardSite extends React.Component<Props, State> {
         } else {
             return (
                 <div>
+                    <AppBar>
+                        <Toolbar>
+                            <Typography variant="h6">Soccer Wizard</Typography>
+                        </Toolbar>
+                    </AppBar>
+                    <Toolbar />
                     <h1 style={{ margin: 24, textAlign: "center" }}>
                         <p>{t("screen.dashboard.hello")}</p>
                         <Button
