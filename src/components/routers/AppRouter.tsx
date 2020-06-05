@@ -4,7 +4,7 @@ import { ApolloProvider } from "react-apollo";
 import { Route, Router, Switch } from "react-router-dom";
 import { graphqlClient } from "../../graphql/graphqlClient";
 import { generalStore } from "../../stores/GeneralStore";
-import { LoginSite } from "../sites/LoginSite";
+import { DashboardSite } from "../sites/dashboard/DashboardSite";
 import { NotFoundSite } from "../sites/NotFoundSite";
 import { LoadingOverlay } from "../ui/LoadingOverlay";
 import { DashboardRouter } from "./DashboardRouter";
@@ -17,13 +17,7 @@ import { RoutingManager } from "./RoutingManager";
 export const AppRouter = observer(() => (
     <ApolloProvider client={graphqlClient}>
         <Router history={history}>
-            <RoutingManager>
-                <Switch>
-                    <NoAuthOnlyRoute exact path={Routes.ROOT} component={LoginSite} />
-                    <PrivateRoute exact path={Routes.DASHBOARD.ROOT} component={DashboardRouter} />
-                    <Route component={NotFoundSite} />
-                </Switch>
-            </RoutingManager>
+            <Route component={DashboardSite} />
         </Router>
         {generalStore.isLoading && <LoadingOverlay />}
     </ApolloProvider>
