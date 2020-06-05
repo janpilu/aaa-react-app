@@ -9,6 +9,10 @@ const locale = {
     "screen.login.form.email.label": "E-Mail",
     "screen.login.form.password.label": "Password",
     "screen.dashboard.hello": "Welcome",
+
+    "screen.listentry.million": "Million",
+    "screen.listentry.euro": "Euros",
+
     "language.german": "German",
     "language.english": "English",
 };
