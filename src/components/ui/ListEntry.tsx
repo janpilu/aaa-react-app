@@ -3,6 +3,7 @@ import { ListItem, ListItemText, ListItemAvatar, Avatar, Typography } from "@mat
 import { t } from "../../i18n/util";
 
 interface Props {
+    key: number;
     team: {
         name: string;
         country: string;

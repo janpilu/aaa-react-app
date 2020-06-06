@@ -8,9 +8,9 @@ interface Props {
 
 const TeamList: React.FC<Props> = ({teams}) => {
     return <List>
-        {teams.map((team)=>{
+        {teams.map((team, key)=>{
             return(
-                <ListEntry team={team} />
+                <ListEntry team={team} key={key} />
             )
         })}
     </List>
