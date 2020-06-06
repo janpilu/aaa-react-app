@@ -23,15 +23,17 @@ export class DashboardSite extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = {
-            sortByVal: true,
+            sortByVal: false,
             error: null,
             isLoaded: false,
             teams: []
         };
         this.toggleSort = this.toggleSort.bind(this)
+        this.sortTeams = this.sortTeams.bind(this)
     }
 
     sortTeams() {
+        console.log("sort")
         if (this.state.sortByVal) {
             this.setState({ teams: this.state.teams.sort(this.compareVal) });
         } else {
@@ -73,7 +75,8 @@ export class DashboardSite extends React.Component<Props, State> {
                         isLoaded: true,
                         teams: result
                     });
-                    this.sortTeams()
+                    this.toggleSort()
+                    this.setState({sortByVal:false})
                 },
                 (error) => {
                     this.setState({
@@ -86,6 +89,7 @@ export class DashboardSite extends React.Component<Props, State> {
 
     render() {
         const { error, isLoaded, teams } = this.state;
+        
         return (
             <div>
                 <AppBar>
@@ -106,7 +110,6 @@ export class DashboardSite extends React.Component<Props, State> {
                         <h3>Loading...</h3>
                         : <TeamList teams={teams}></TeamList>
                 }
-
             </div>
         );
 
