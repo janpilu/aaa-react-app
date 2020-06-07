@@ -18,7 +18,7 @@ const locale = {
     "screen.club.wert": "is worth",
 
     "screen.club.bisher": "managed to win",
-    "screen.club.erreichen": "games in europe.",
+    "screen.club.erreichen": "games in europe",
 
 
     "language.german": "German",
