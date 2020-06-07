@@ -28,7 +28,6 @@ export class DashboardSite extends React.Component<Props, State> {
     constructor(props: Props) {
         super(props);
         this.state = {
-            sortByVal: false,
             error: null,
             isLoaded: false,
             teams: []
@@ -39,7 +38,7 @@ export class DashboardSite extends React.Component<Props, State> {
 
     sortTeams() {
         console.log("sort")
-        if (this.state.sortByVal) {
+        if (generalStore.sortByVal) {
             this.setState({ teams: this.state.teams.sort(this.compareVal) });
         } else {
             this.setState({ teams: this.state.teams.sort(this.compareName) });
@@ -47,7 +46,7 @@ export class DashboardSite extends React.Component<Props, State> {
     }
 
     toggleSort() {
-        this.setState({ sortByVal: !this.state.sortByVal });
+        generalStore.sortByVal=!generalStore.sortByVal
         this.sortTeams();
     }
 
@@ -80,8 +79,7 @@ export class DashboardSite extends React.Component<Props, State> {
                         isLoaded: true,
                         teams: result
                     });
-                    this.toggleSort()
-                    this.setState({sortByVal:false})
+                    this.sortTeams()
                 },
                 (error) => {
                     this.setState({
@@ -123,7 +121,6 @@ export class DashboardSite extends React.Component<Props, State> {
 }
 
 interface State {
-    sortByVal: boolean;
     error: any;
     isLoaded: boolean;
     teams: [];

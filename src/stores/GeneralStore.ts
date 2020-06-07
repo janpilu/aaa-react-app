@@ -5,6 +5,7 @@ import { ILocales } from "../i18n/ILocales";
 class GeneralStore {
     @observable locale: ILocales = DEFAULT_LOCALE;
     @observable isLoading = false;
+    @observable sortByVal = false;
 }
 
 const generalStore = new GeneralStore();
