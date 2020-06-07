@@ -1,5 +1,6 @@
-import { Button, AppBar, Toolbar, Typography, IconButton, makeStyles, Theme, createStyles } from "@material-ui/core";
+import { Button, AppBar, Toolbar, Typography, IconButton, makeStyles, Theme, createStyles, Grid } from "@material-ui/core";
 import LanguageIcon from '@material-ui/icons/Language';
+import SortIcon from '@material-ui/icons/Sort';
 import { observer } from "mobx-react";
 import * as React from "react";
 import { t, setLocale } from "../../../i18n/util";
@@ -8,6 +9,10 @@ import { authStore } from "../../../stores/AuthStore";
 import { history } from "../../routers/history";
 import { Routes } from "../../routers/Routes";
 import TeamList from "../../ui/TeamList";
+
+const languagebtn = {
+    marginLeft: 'auto'
+};
 
 const toggleLanguage = () => {
     if (generalStore.locale === "de") {
@@ -95,14 +100,15 @@ export class DashboardSite extends React.Component<Props, State> {
                 <AppBar>
                     <Toolbar>
                         <Typography variant="h6">Soccer Wizard</Typography>
-                        <IconButton color="inherit" aria-label="translate" onClick={toggleLanguage}>
-                            <LanguageIcon className="languagebutton" />
+                        <IconButton color="inherit" aria-label="translate" style={languagebtn} onClick={toggleLanguage}>
+                            <LanguageIcon  />
                         </IconButton>
                         <IconButton color="inherit" aria-label="translate" onClick={this.toggleSort}>
-                            <LanguageIcon className="languagebutton" />
+                            <SortIcon className="sortbtn" />
                         </IconButton>
                     </Toolbar>
                 </AppBar>
+                
                 <Toolbar />
                 {error ?
                     <div>Error: {error.message}</div>
