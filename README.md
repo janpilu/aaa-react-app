@@ -1,4 +1,22 @@
-# aaa-react-scripts-ts
+# Soccer Wizard
+
+Soccer Wizard is a Web app that displays several soccer clubs and ranks them either by their name or value.
+
+The user can click on one of the Clubs to be redirected to a page containing further information
+
+## Features
+
+The app contains two noteworthy features, the first one being sorting and the second one being translating.
+
+### Sorting
+
+The ListView page of the app, contains a sorting button that toggles between sorting the list by the clubs names and sorting the list by the clubs value.
+
+### Translation
+
+Both Pages contain a button for switching the Apps language from German to English and vice versa.
+
+## Template
 
 This project was bootstrapped through `yarn create react-app my-app --scripts-version=aaa-react-scripts-ts`, a customized react template project generator for [at all about apps](https://allaboutapps.at).
 
