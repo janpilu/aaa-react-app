@@ -25,9 +25,9 @@ const ListEntry: React.FC<Props> = ({ team }) => {
                     variant="body2"
                     color="textPrimary"
                 >
-                    {team.country}
+                    {team.country}&nbsp;
                 </Typography>
-                {team.value} {t("screen.listentry.million")}{t("screen.listentry.euro")}
+                {team.value}&nbsp;{t("screen.listentry.million")}&nbsp;{t("screen.listentry.euro")}
             </React.Fragment>
         } />
     </ListItem>
