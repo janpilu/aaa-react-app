@@ -17,7 +17,7 @@ import { RoutingManager } from "./RoutingManager";
 export const AppRouter = observer(() => (
     <ApolloProvider client={graphqlClient}>
         <Router history={history}>
-            <Route component={DashboardSite} />
+            <DashboardRouter />
         </Router>
         {generalStore.isLoading && <LoadingOverlay />}
     </ApolloProvider>
