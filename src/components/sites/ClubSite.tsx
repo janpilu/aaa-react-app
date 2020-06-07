@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Route, Router, Switch, Link } from "react-router-dom";
-import { AppBar, Toolbar, Typography, IconButton, Paper, Container, Grid } from "@material-ui/core";
+import {  Link } from "react-router-dom";
+import { AppBar, Toolbar, Typography, IconButton, Grid } from "@material-ui/core";
 import LanguageIcon from '@material-ui/icons/Language';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { generalStore } from "../../stores/GeneralStore";

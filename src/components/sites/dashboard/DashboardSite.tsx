@@ -1,13 +1,10 @@
-import { Button, AppBar, Toolbar, Typography, IconButton, makeStyles, Theme, createStyles, Grid, CircularProgress } from "@material-ui/core";
+import { AppBar, Toolbar, Typography, IconButton, makeStyles, Theme, createStyles, Grid, CircularProgress } from "@material-ui/core";
 import LanguageIcon from '@material-ui/icons/Language';
 import SortIcon from '@material-ui/icons/Sort';
 import { observer } from "mobx-react";
 import * as React from "react";
-import { t, setLocale } from "../../../i18n/util";
+import { setLocale } from "../../../i18n/util";
 import { generalStore } from "../../../stores/GeneralStore";
-import { authStore } from "../../../stores/AuthStore";
-import { history } from "../../routers/history";
-import { Routes } from "../../routers/Routes";
 import TeamList from "../../ui/TeamList";
 
 const languagebtn = {

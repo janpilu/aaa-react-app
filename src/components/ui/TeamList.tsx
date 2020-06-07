@@ -2,7 +2,6 @@ import React from "react";
 import { List } from "@material-ui/core";
 import ListEntry from "./ListEntry";
 import { Link } from "react-router-dom";
-import {generalStore} from "../../stores/GeneralStore"
 import { Routes } from "../routers/Routes";
 
 interface Props {
