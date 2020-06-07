@@ -5,7 +5,7 @@ import enMessages, { IAvailableI18nIds } from "./en";
 import { generalStore } from "../stores/GeneralStore";
 import { ILocales } from "./ILocales";
 
-const DEFAULT_LOCALE = "en";
+const DEFAULT_LOCALE = "de";
 
 type IMessages = {
     [locale in ILocales]: {
