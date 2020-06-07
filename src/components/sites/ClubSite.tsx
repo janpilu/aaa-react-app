@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Route, Router, Switch, Link } from "react-router-dom";
-import { AppBar, Toolbar, Typography, IconButton } from "@material-ui/core";
+import { AppBar, Toolbar, Typography, IconButton, Paper, Container, Grid } from "@material-ui/core";
 import LanguageIcon from '@material-ui/icons/Language';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { generalStore } from "../../stores/GeneralStore";
@@ -10,6 +10,31 @@ import { Routes } from "../routers/Routes";
 const languagebtn = {
     marginLeft: 'auto'
 };
+
+const logobg = {
+    background: '#383838'
+};
+
+const country = {
+    paddingLeft: "1rem",
+    paddingBottom: "1rem",
+    color: "white",
+    fontWeight: 500
+}
+
+const desc = {
+    paddingLeft: "1rem",
+    paddingRight: "1rem",
+    paddingBottom: "1rem",
+    paddingTop: "1rem"
+}
+
+const logo = {
+    paddingLeft: "1rem",
+    paddingRight: "1rem",
+    paddingTop: "0.5rem",
+    paddingBottom: "0.5rem"
+}
 
 const toggleLanguage = () => {
     if (generalStore.locale === "de") {
@@ -38,10 +63,10 @@ class ClubSite extends React.Component<Props, State>{
     }
     render() {
         return (<div>
-            <AppBar>
+            <AppBar position="fixed">
                 <Toolbar>
                     <Link to={Routes.DASHBOARD.ROOT}>
-                        <IconButton style={{color: "white"}} aria-label="translate">
+                        <IconButton style={{ color: "white" }} aria-label="translate">
                             <ArrowBackIcon />
                         </IconButton>
                     </Link>
@@ -51,6 +76,18 @@ class ClubSite extends React.Component<Props, State>{
                     </IconButton>
                 </Toolbar>
             </AppBar>
+            <Toolbar />
+            <div style={logobg}>
+                <Grid container justify="center" alignItems="center">
+                    <img src={this.state.team.image} width="250rem" style={logo} alt={this.state.team.name+" logo"}/>
+                </Grid>
+                <strong><Typography variant="h5" style={country}>{this.state.team.country}</Typography></strong>
+            </div>
+            <div style={desc}>
+                <p>Der Club <b>{this.state.team.name}</b> aus {this.state.team.country} hat einen Wert von {this.state.team.value} Millionen Euro.</p>
+                <br />
+                <p><b> {this.state.team.name}</b> konnte bislang {this.state.team.european_titles} Siege auf europäischer Ebene erreichen.</p>
+            </div>
         </div>
         )
     }
