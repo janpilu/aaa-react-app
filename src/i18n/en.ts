@@ -13,6 +13,14 @@ const locale = {
     "screen.listentry.million": "Million",
     "screen.listentry.euro": "Euros",
 
+    "screen.club.club": "The club",
+    "screen.club.aus": "from",
+    "screen.club.wert": "is worth",
+
+    "screen.club.bisher": "managed to win",
+    "screen.club.erreichen": "games in europe.",
+
+
     "language.german": "German",
     "language.english": "English",
 };

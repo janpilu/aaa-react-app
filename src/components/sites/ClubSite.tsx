@@ -84,9 +84,9 @@ class ClubSite extends React.Component<Props, State>{
                 <strong><Typography variant="h5" style={country}>{this.state.team.country}</Typography></strong>
             </div>
             <div style={desc}>
-                <p>Der Club <b>{this.state.team.name}</b> aus {this.state.team.country} hat einen Wert von {this.state.team.value} Millionen Euro.</p>
+                <p>{t("screen.club.club")} <b>{this.state.team.name}</b> {t("screen.club.aus")} {this.state.team.country} {t("screen.club.wert")} {this.state.team.value} {t("screen.listentry.million")} {t("screen.listentry.euro")}.</p>
                 <br />
-                <p><b> {this.state.team.name}</b> konnte bislang {this.state.team.european_titles} Siege auf europäischer Ebene erreichen.</p>
+                <p><b> {this.state.team.name}</b> {t("screen.club.bisher")} {this.state.team.european_titles} {t("screen.club.erreichen")}.</p>
             </div>
         </div>
         )

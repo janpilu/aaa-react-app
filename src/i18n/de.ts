@@ -13,6 +13,13 @@ const locale = {
     "screen.listentry.million": "Millionen",
     "screen.listentry.euro": "Euro",
 
+    "screen.club.club": "Der Club",
+    "screen.club.aus": "aus",
+    "screen.club.wert": "Hat einen Wert von",
+
+    "screen.club.bisher": "konnte bislang",
+    "screen.club.erreichen": "Siege auf europäischer Ebene erreichen",
+
     "language.german": "Deutsch",
     "language.english": "Englisch",
 };
