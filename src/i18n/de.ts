@@ -15,7 +15,7 @@ const locale = {
 
     "screen.club.club": "Der Club",
     "screen.club.aus": "aus",
-    "screen.club.wert": "Hat einen Wert von",
+    "screen.club.wert": "hat einen Wert von",
 
     "screen.club.bisher": "konnte bislang",
     "screen.club.erreichen": "Siege auf europäischer Ebene erreichen",
