@@ -1,4 +1,4 @@
-import { Button, AppBar, Toolbar, Typography, IconButton, makeStyles, Theme, createStyles, Grid } from "@material-ui/core";
+import { Button, AppBar, Toolbar, Typography, IconButton, makeStyles, Theme, createStyles, Grid, CircularProgress } from "@material-ui/core";
 import LanguageIcon from '@material-ui/icons/Language';
 import SortIcon from '@material-ui/icons/Sort';
 import { observer } from "mobx-react";
@@ -113,7 +113,7 @@ export class DashboardSite extends React.Component<Props, State> {
                 {error ?
                     <div>Error: {error.message}</div>
                     : !isLoaded ?
-                        <h3>Loading...</h3>
+                    <Grid container justify="center" alignItems="center" style={{height: "50rem"}}><CircularProgress /></Grid>
                         : <TeamList teams={teams}></TeamList>
                 }
             </div>
